@@ -21,7 +21,7 @@ YOLOv4’s architecture is composed of CSPDarknet53 as a backbone, spatial pyram
    * .process.py: It will create train.txt and valid.txt  
    * test.txt: Path of testing images  
    * train.txt: Path of training images  
-*
+* **Inside custom folder**: Inside custom folder place images which contains images and labels. Inside this folder place the file proces.py [reference](https://github.com/WyattAutomation/Train-YOLOv3-with-OpenImagesV4) and run this. One will get train.txt an test.txt outside the custom folder. Now we need to make cfg for custom dataset, .data file and .names file which will be discussed in the next steps 
 
 
 
