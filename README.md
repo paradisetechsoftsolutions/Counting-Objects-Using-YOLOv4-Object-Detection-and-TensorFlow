@@ -11,7 +11,11 @@ YOLOv4’s architecture is composed of CSPDarknet53 as a backbone, spatial pyram
 
 ## Implementation for this project  
 * **Dataset used:** Dataset has been downloaded from Open Image Dataset which contains 600 classes and more than 1,700,000 images. Link for the Dataset is [Open Image Dataset v4](https://storage.googleapis.com/openimages/web/index.html). Dataset is very huge and I had made the code for two classes named as Pizza and Fork. To download images for specific classes, I followed the repository [OIDv4_Toolkit](https://github.com/EscVM/OIDv4_ToolKit). Look at the repo and each step is clearly mentioned how to do this. Once you clone the above github repository please create the virtualenv and install the requirements mentioned in the reposiotry.I have used 200 images for both pizza and fork 
-* **Labels creation:** Next Step was to create label for each image. For this I have used two python files named as Fork.py and pizza.py which has been created with the help of Wyatt Automation: [Training YOLOV3 with OpenImagesv4](https://github.com/WyattAutomation/Train-YOLOv3-with-OpenImagesV4).  
+* **Labels creation:** Next Step was to create label for each image. For this I have used two python files named as Fork.py and pizza.py which has been created with the help of Wyatt Automation: [Training YOLOV3 with OpenImagesv4](https://github.com/WyattAutomation/Train-YOLOv3-with-OpenImagesV4). Please take care of the path you choose to save the labels corresponding to each folder.  
+* **Renaming_filenames and labels:** Filenames and labels has been renamed from 0 to 399 integer values using the renaming_filename.py script. i am sharing the link where filesnames and labels can be downloaded directly and once can save himself/herself from above step. Here is the [link](https://drive.google.com/drive/folders/1XGLrIRB16pdrV7VJ3t6c9HGfesu8rkPp?usp=sharing)  
+* **Download AlexeyAB darknet Repository:** Please download the AlexeyAB darknet repository using this [link](https://github.com/AlexeyAB/darknet). Along with that you need to install darknet in your system. Darknet can be installed both for cpu and gpu. Please follow this [link](https://pjreddie.com/darknet/install/).  
+
+
 
 
 
