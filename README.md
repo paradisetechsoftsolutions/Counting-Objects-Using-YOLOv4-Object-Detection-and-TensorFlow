@@ -37,7 +37,11 @@ YOLOv4’s architecture is composed of CSPDarknet53 as a backbone, spatial pyram
 ./darknet detector train custom.data custom.cfg yolov4.conv.137   
 
 ```  
-Download yolov4.conv.137 from  the [link](https://drive.google.com/file/d/1JKF-bdIklxOOVy-2Cr5qdvjgGpmGfcbp/view). Reference for this one is [AlexeyAB darknet](https://github.com/AlexeyAB/darknet) 
+Download yolov4.conv.137 from  the [link](https://drive.google.com/file/d/1JKF-bdIklxOOVy-2Cr5qdvjgGpmGfcbp/view). Reference for this one is [AlexeyAB darknet](https://github.com/AlexeyAB/darknet)   
+* During Training, I got the below loss rate at 4000 iterations. Please see the results from the below chart.  
+Training is stopped at 4000 iterations and weights can be downloaded using the link custom_4000.weights  
+![chart_kitchen](https://user-images.githubusercontent.com/39157936/93302966-63790300-f818-11ea-9462-393206e78101.png)  
 
+* **Converting the yolo model into tensorflow model**: 
 
 
