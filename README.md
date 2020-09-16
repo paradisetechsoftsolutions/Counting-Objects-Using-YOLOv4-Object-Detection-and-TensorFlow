@@ -46,8 +46,17 @@ Training is stopped at 4000 iterations and weights can be downloaded using the l
 ```
 python save_model.py --weights ./data/custom_4000.weights --output ./checkpoints/yolov4-416 --input_size 416 --model yolov4 
 ```  
-Note: Use custom_4000.weights and put the name of classes in core/config.py files there which is custom.names. If everything goes well, one will get the checkpoints which is tensorflow frozen model.
+Note: Use custom_4000.weights and put the name of classes in core/config.py files there which is custom.names. If everything goes well, one will get the checkpoints which is tensorflow frozen model.  
+* **Detection only**: Use the below code for detectiing objects only    
+```
+python3 detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --images ./data/images/pizza_fresca.jpg
+```  
+* **Some changes**: To display the classes of each object which one needs to count, please make the change as "To count the number of objects for each individual class of your object detector you need to add the custom flag "--count" as well as change one line in the detect.py or detect_video.py script. By default the count_objects function has a parameter called by_class that is set to False. If you change this parameter to True it will count per class instead"  
+```
+python3 detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --images ./data/images/pizza-and-fork.jpg --count  
+```  
 
-
+If everything goes fine, you will get results  
+Happy Coding!!!
 
 
