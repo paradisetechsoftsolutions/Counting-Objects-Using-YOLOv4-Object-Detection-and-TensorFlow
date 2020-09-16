@@ -1,0 +1,5 @@
+classes = 2
+train  = /yolo_model/darknet_tuned/OIDv4_ToolKit/OID/darknet/alex_folder/darknet/custom/train.txt
+valid = /yolo_model/darknet_tuned/OIDv4_ToolKit/OID/darknet/alex_folder/darknet/custom/test.txt
+names = /yolo_model/darknet_tuned/OIDv4_ToolKit/OID/darknet/alex_folder/darknet/custom/custom.names
+backup = /yolo_model/darknet_tuned/OIDv4_ToolKit/OID/darknet/alex_folder/darknet/backup
