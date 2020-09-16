@@ -29,19 +29,6 @@ YOLOv4’s architecture is composed of CSPDarknet53 as a backbone, spatial pyram
    * change line steps to 80% and 90% of max_batches  
    * set network size width=416 height=416 or any value multiple of 32
    * change line classes=n to your number of objects in each of 3 yolo-layers (n is number of classes)  
-   * change [filters=255] to filters=(classes + 5)x3 in the 3 [convolutional] before each [yolo] layer, keep in mind that it    only has to be the last [convolutional] before each of the [yolo] layers. Please write the integer value after caliculation not  (classes + 5)x3. In my case there are 2 classes and hence the value is 2+5*3=21. Please check the custom.config file in the repo to know the things better  
-* **.data**: This will contains classes, train, valid, names and backup.  
+   * change [filters=255] to filters=(classes + 5)x3 in the 3 [convolutional] before each [yolo] layer, keep in mind that it    only has to be the last [convolutional] before each of the [yolo] layers. Please write the integer value after caliculation not  (classes + 5)x3. In my case there are 2 classes and hence the value is 2+5*3=21. Please check the custom.cfg file in the repo to know the things better  
+* **.data**: This will contains classes, train, valid, names and backup. backup is the folder where trained model weights are stored. 
 * **.names**: kitchen.names contains names of the classes.  
-
-
-
-
-
-
-
-
-
-
-
-
-
