@@ -21,7 +21,15 @@ YOLOv4’s architecture is composed of CSPDarknet53 as a backbone, spatial pyram
    * .process.py: It will create train.txt and valid.txt  
    * test.txt: Path of testing images  
    * train.txt: Path of training images  
-* **Inside custom folder**: Inside custom folder place images which contains images and labels. Inside this folder place the file proces.py [reference](https://github.com/WyattAutomation/Train-YOLOv3-with-OpenImagesV4) and run this. One will get train.txt an test.txt outside the custom folder. Now we need to make cfg for custom dataset, .data file and .names file which will be discussed in the next steps 
+* **Inside custom folder**: Inside custom folder place images which contains images and labels. Inside this folder place the file proces.py [reference](https://github.com/WyattAutomation/Train-YOLOv3-with-OpenImagesV4) and run this. One will get train.txt an test.txt outside the custom folder. Now we need to make cfg for custom dataset, .data file and .names file which will be discussed in the next steps  
+* **Creating config file inside the custom folder**: config file is created in the custom folder. There are some changes which one has to do. I am mentioning below which is taken from [AlexeyAB darknet](https://github.com/AlexeyAB/darknet). These are as below  
+   * change line batch to batch=64  
+   * change line subdivisions to subdivisions=16  
+   * change line max_batches to (classes*2000)  
+   * change line steps to 80% and 90% of max_batches  
+   * set network size width=416 height=416 or any value multiple of 32
+   * change line classes=n to your number of objects in each of 3 yolo-layers (n is number of classes)
+   * 
 
 
 
