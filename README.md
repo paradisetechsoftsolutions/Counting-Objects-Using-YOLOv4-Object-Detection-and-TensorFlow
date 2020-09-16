@@ -55,7 +55,14 @@ python3 detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 -
 * **Some changes**: To display the classes of each object which one needs to count, please make the change as "To count the number of objects for each individual class of your object detector you need to add the custom flag "--count" as well as change one line in the detect.py or detect_video.py script. By default the count_objects function has a parameter called by_class that is set to False. If you change this parameter to True it will count per class instead"  
 ```
 python3 detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --images ./data/images/pizza-and-fork.jpg --count  
+```   
+* **Cropping Detected Region and Finding bounding boxes of each class:**  Run the below code for this  
+```
+python3 detect.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --images ./data/images/pizza-and-fork.jpg --crop      
 ```  
+Also please look at the below screenshot to find the bounding boxes of each class  
+![cropping_results](https://user-images.githubusercontent.com/39157936/93324522-a8f6f980-f833-11ea-8e53-3059b21ada3b.png)
+
 
 If everything goes fine, you will get results  
 Happy Coding!!!
