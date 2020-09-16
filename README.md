@@ -39,9 +39,15 @@ YOLOv4’s architecture is composed of CSPDarknet53 as a backbone, spatial pyram
 ```  
 Download yolov4.conv.137 from  the [link](https://drive.google.com/file/d/1JKF-bdIklxOOVy-2Cr5qdvjgGpmGfcbp/view). Reference for this one is [AlexeyAB darknet](https://github.com/AlexeyAB/darknet)   
 * During Training, I got the below loss rate at 4000 iterations. Please see the results from the below chart.  
-Training is stopped at 4000 iterations and weights can be downloaded using the link custom_4000.weights  
+Training is stopped at 4000 iterations and weights can be downloaded using the link [custom_4000.weights](https://drive.google.com/file/d/1KdXcpRJm9NkOgQhd00HeqZHHMujPG4Ok/view?usp=sharing)  
 ![chart_kitchen](https://user-images.githubusercontent.com/39157936/93302966-63790300-f818-11ea-9462-393206e78101.png)  
 
-* **Converting the yolo model into tensorflow model**: 
+* **Converting the yolo model into tensorflow model**: First of all to accomplish this step, please download the below repository [the AI GuysCode](https://github.com/theAIGuysCode/yolov4-custom-functions) and install all the requirements. I have installed for gpu. I need cuda 10.1 and nvidia-drivers greater than or equal to 418. Please read from [here](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html).   
+```
+python save_model.py --weights ./data/custom_4000.weights --output ./checkpoints/yolov4-416 --input_size 416 --model yolov4 
+```  
+Note: Use custom_4000.weights and put the name of classes in core/config.py files there which is custom.names. If everything goes well, one will get the checkpoints which is tensorflow frozen model.
+
+
 
 
