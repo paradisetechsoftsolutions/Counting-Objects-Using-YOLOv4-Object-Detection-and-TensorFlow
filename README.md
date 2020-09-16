@@ -31,4 +31,13 @@ YOLOv4’s architecture is composed of CSPDarknet53 as a backbone, spatial pyram
    * change line classes=n to your number of objects in each of 3 yolo-layers (n is number of classes)  
    * change [filters=255] to filters=(classes + 5)x3 in the 3 [convolutional] before each [yolo] layer, keep in mind that it    only has to be the last [convolutional] before each of the [yolo] layers. Please write the integer value after caliculation not  (classes + 5)x3. In my case there are 2 classes and hence the value is 2+5*3=21. Please check the custom.cfg file in the repo to know the things better  
 * **.data**: This will contains classes, train, valid, names and backup. backup is the folder where trained model weights are stored. 
-* **.names**: kitchen.names contains names of the classes.  
+* **.names**: custom.names contains names of the classes.
+* **Training the yolov4 model**: Since all the changes has been made, now it is time to train the model using the below command   
+```
+./darknet detector train custom.data custom.cfg yolov4.conv.137   
+
+```  
+Download yolov4.conv.137 from  the [link](https://drive.google.com/file/d/1JKF-bdIklxOOVy-2Cr5qdvjgGpmGfcbp/view). Reference for this one is [AlexeyAB darknet](https://github.com/AlexeyAB/darknet) 
+
+
+
