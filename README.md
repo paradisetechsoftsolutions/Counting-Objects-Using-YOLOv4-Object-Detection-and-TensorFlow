@@ -1,4 +1,5 @@
-# Counting-Objects-Using-YOLOv4-Object-Detection-and-TensorFlow
+# Counting-Objects-Using-YOLOv4-Object-Detection-and-TensorFlow  
+![detection1](https://user-images.githubusercontent.com/39157936/93322424-edcd6100-f830-11ea-92a9-3e001605e5c5.png)
   
 This repository aims to both detect custom images as well as count them. Project is divided into three phases. 
 
